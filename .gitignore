@@ -1,0 +1,67 @@
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Data files (too large for GitHub) ────────────────────────
+data/*.csv
+data/*.xlsx
+data/*.parquet
+data/*.json
+# Keep the placeholder README inside data/
+!data/README.md
+
+# ── Trained model files (large binaries) ─────────────────────
+outputs/models/*.pkl
+outputs/models/*.joblib
+# Keep the folder structure
+!outputs/models/.gitkeep
+!outputs/figures/.gitkeep
+
+# ── OS files ──────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── Optuna study databases ────────────────────────────────────
+*.db
+optuna_study/
+
+# ── Matplotlib cache ──────────────────────────────────────────
+.matplotlib/
