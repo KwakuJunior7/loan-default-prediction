@@ -438,7 +438,7 @@ If you use this work in your research, please cite:
   year         = {2026},
   institution  = {New Mexico Highlands University},
   note         = {M.S. Computer Science / MBA Finance Capstone Project},
-  url          = {https://github.com/your-username/loan-default-prediction}
+  url          = {https://github.com/KwakuJunior7/loan-default-prediction}
 }
 ```
 
