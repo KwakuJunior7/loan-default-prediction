@@ -1,0 +1,25 @@
+,Mean |SHAP|,Share of total
+loan_to_income_ratio,1.2181,0.1541
+person_home_ownership,1.1433,0.1446
+person_income,0.9083,0.1149
+loan_int_rate,0.7635,0.0966
+person_education,0.5992,0.0758
+high_rate_flag,0.3986,0.0504
+intent_VENTURE,0.3861,0.0488
+interest_burden,0.3716,0.047
+intent_DEBTCONSOLIDATION,0.249,0.0315
+intent_HOMEIMPROVEMENT,0.221,0.028
+intent_MEDICAL,0.2064,0.0261
+loan_amnt,0.1783,0.0226
+intent_EDUCATION,0.1445,0.0183
+cb_person_cred_hist_length,0.1442,0.0182
+person_age,0.1252,0.0158
+rate_score_interaction,0.1231,0.0156
+intent_PERSONAL,0.1228,0.0155
+person_emp_exp,0.1227,0.0155
+loan_percent_income,0.1069,0.0135
+credit_score,0.1036,0.0131
+emp_age_ratio,0.0903,0.0114
+poor_credit_flag,0.0903,0.0114
+hist_per_age,0.0875,0.0111
+high_loan_burden_flag,0.0,0.0

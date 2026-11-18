@@ -1,0 +1,243 @@
+{
+  "audit": {
+    "n_rows": 44993,
+    "default_rate": 0.2223,
+    "prior_default_share": 0.508,
+    "default_rate_given_prior_default": 0.0,
+    "default_rate_no_prior_default": 0.4517,
+    "default_rate_by_credit_score_quintile": [
+      0.2241,
+      0.2247,
+      0.2237,
+      0.2242,
+      0.2143
+    ],
+    "default_rate_by_gender": {
+      "female": 0.2225,
+      "male": 0.2221
+    }
+  },
+  "cv_baselines": {
+    "Logistic Regression": {
+      "CV AUC mean": 0.9559,
+      "CV AUC sd": 0.0017
+    },
+    "Random Forest": {
+      "CV AUC mean": 0.9694,
+      "CV AUC sd": 0.0016
+    },
+    "XGBoost": {
+      "CV AUC mean": 0.9762,
+      "CV AUC sd": 0.0017
+    },
+    "LightGBM": {
+      "CV AUC mean": 0.9773,
+      "CV AUC sd": 0.0017
+    }
+  },
+  "tuned": {
+    "XGBoost": {
+      "cv_auc": 0.9776,
+      "params": {
+        "n_estimators": 435,
+        "max_depth": 6,
+        "learning_rate": 0.05968783926857832,
+        "subsample": 0.747149797850814,
+        "colsample_bytree": 0.9709219707437928,
+        "min_child_weight": 6,
+        "gamma": 0.828707865808312,
+        "reg_alpha": 0.00029246940109020354,
+        "reg_lambda": 5.883150992892689e-05
+      }
+    },
+    "LightGBM": {
+      "cv_auc": 0.9787,
+      "params": {
+        "n_estimators": 553,
+        "max_depth": 7,
+        "learning_rate": 0.0637230513640198,
+        "num_leaves": 69,
+        "subsample": 0.9238408120115329,
+        "colsample_bytree": 0.999745105294283,
+        "min_child_samples": 88,
+        "reg_alpha": 3.7330168354077543e-07,
+        "reg_lambda": 1.1706609594791508e-05,
+        "subsample_freq": 1
+      }
+    }
+  },
+  "test_results": {
+    "Logistic Regression": {
+      "AUC-ROC": 0.9534,
+      "Avg precision": 0.8582,
+      "KS": 0.7502,
+      "F1": 0.736,
+      "Recall (sensitivity)": 0.908,
+      "Specificity": 0.8401
+    },
+    "Random Forest": {
+      "AUC-ROC": 0.9679,
+      "Avg precision": 0.9157,
+      "KS": 0.7808,
+      "F1": 0.8171,
+      "Recall (sensitivity)": 0.83,
+      "Specificity": 0.9424
+    },
+    "XGBoost": {
+      "AUC-ROC": 0.9761,
+      "Avg precision": 0.9356,
+      "KS": 0.8196,
+      "F1": 0.8447,
+      "Recall (sensitivity)": 0.8105,
+      "Specificity": 0.969
+    },
+    "LightGBM": {
+      "AUC-ROC": 0.9775,
+      "Avg precision": 0.9386,
+      "KS": 0.8253,
+      "F1": 0.8454,
+      "Recall (sensitivity)": 0.8095,
+      "Specificity": 0.9699
+    },
+    "XGBoost (tuned)": {
+      "AUC-ROC": 0.978,
+      "Avg precision": 0.9399,
+      "KS": 0.8282,
+      "F1": 0.8501,
+      "Recall (sensitivity)": 0.815,
+      "Specificity": 0.9707
+    },
+    "LightGBM (tuned)": {
+      "AUC-ROC": 0.9789,
+      "Avg precision": 0.9422,
+      "KS": 0.8301,
+      "F1": 0.8517,
+      "Recall (sensitivity)": 0.82,
+      "Specificity": 0.9699
+    },
+    "LightGBM (tuned), no prior-default feature": {
+      "AUC-ROC": 0.9364,
+      "Avg precision": 0.881,
+      "KS": 0.7304,
+      "F1": 0.7876,
+      "Recall (sensitivity)": 0.698,
+      "Specificity": 0.9787
+    },
+    "LightGBM (tuned), applicants without a prior default": {
+      "AUC-ROC": 0.9389,
+      "Avg precision": 0.9422,
+      "KS": 0.736,
+      "F1": 0.8517,
+      "Recall (sensitivity)": 0.82,
+      "Specificity": 0.9126
+    }
+  },
+  "shap_top10_all_features": {
+    "previous_loan_defaults_on_file": {
+      "Mean |SHAP|": 4.8841,
+      "Share of total": 0.4353
+    },
+    "loan_to_income_ratio": {
+      "Mean |SHAP|": 0.9256,
+      "Share of total": 0.0825
+    },
+    "person_home_ownership": {
+      "Mean |SHAP|": 0.7921,
+      "Share of total": 0.0706
+    },
+    "person_income": {
+      "Mean |SHAP|": 0.7862,
+      "Share of total": 0.0701
+    },
+    "person_education": {
+      "Mean |SHAP|": 0.4807,
+      "Share of total": 0.0428
+    },
+    "loan_int_rate": {
+      "Mean |SHAP|": 0.4588,
+      "Share of total": 0.0409
+    },
+    "interest_burden": {
+      "Mean |SHAP|": 0.3131,
+      "Share of total": 0.0279
+    },
+    "high_rate_flag": {
+      "Mean |SHAP|": 0.3043,
+      "Share of total": 0.0271
+    },
+    "intent_VENTURE": {
+      "Mean |SHAP|": 0.2512,
+      "Share of total": 0.0224
+    },
+    "rate_score_interaction": {
+      "Mean |SHAP|": 0.2329,
+      "Share of total": 0.0208
+    }
+  },
+  "shap_top10_no_prior_default": {
+    "loan_to_income_ratio": {
+      "Mean |SHAP|": 1.2181,
+      "Share of total": 0.1541
+    },
+    "person_home_ownership": {
+      "Mean |SHAP|": 1.1433,
+      "Share of total": 0.1446
+    },
+    "person_income": {
+      "Mean |SHAP|": 0.9083,
+      "Share of total": 0.1149
+    },
+    "loan_int_rate": {
+      "Mean |SHAP|": 0.7635,
+      "Share of total": 0.0966
+    },
+    "person_education": {
+      "Mean |SHAP|": 0.5992,
+      "Share of total": 0.0758
+    },
+    "high_rate_flag": {
+      "Mean |SHAP|": 0.3986,
+      "Share of total": 0.0504
+    },
+    "intent_VENTURE": {
+      "Mean |SHAP|": 0.3861,
+      "Share of total": 0.0488
+    },
+    "interest_burden": {
+      "Mean |SHAP|": 0.3716,
+      "Share of total": 0.047
+    },
+    "intent_DEBTCONSOLIDATION": {
+      "Mean |SHAP|": 0.249,
+      "Share of total": 0.0315
+    },
+    "intent_HOMEIMPROVEMENT": {
+      "Mean |SHAP|": 0.221,
+      "Share of total": 0.028
+    }
+  },
+  "fairness_by_gender": {
+    "female": {
+      "Applicants": 4005,
+      "Actual default rate": 0.218,
+      "Predicted default rate": 0.2025,
+      "True positive rate": 0.8133,
+      "False positive rate": 0.0322,
+      "AUC": 0.977,
+      "Approval rate": 0.7975,
+      "Adverse impact ratio": 1.0
+    },
+    "male": {
+      "Applicants": 4994,
+      "Actual default rate": 0.2257,
+      "Predicted default rate": 0.2082,
+      "True positive rate": 0.8252,
+      "False positive rate": 0.0284,
+      "AUC": 0.9805,
+      "Approval rate": 0.7918,
+      "Adverse impact ratio": 0.9929
+    }
+  },
+  "n_test": 8999,
+  "optuna_trials": 50
+}

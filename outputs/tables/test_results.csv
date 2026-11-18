@@ -1,0 +1,9 @@
+Model,AUC-ROC,Avg precision,KS,F1,Recall (sensitivity),Specificity
+Logistic Regression,0.9534,0.8582,0.7502,0.736,0.908,0.8401
+Random Forest,0.9679,0.9157,0.7808,0.8171,0.83,0.9424
+XGBoost,0.9761,0.9356,0.8196,0.8447,0.8105,0.969
+LightGBM,0.9775,0.9386,0.8253,0.8454,0.8095,0.9699
+XGBoost (tuned),0.978,0.9399,0.8282,0.8501,0.815,0.9707
+LightGBM (tuned),0.9789,0.9422,0.8301,0.8517,0.82,0.9699
+"LightGBM (tuned), no prior-default feature",0.9364,0.881,0.7304,0.7876,0.698,0.9787
+"LightGBM (tuned), applicants without a prior default",0.9389,0.9422,0.736,0.8517,0.82,0.9126

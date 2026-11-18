@@ -65,3 +65,6 @@ optuna_study/
 
 # ── Matplotlib cache ──────────────────────────────────────────
 .matplotlib/
+
+# Run logs (contain local paths)
+outputs/pipeline_log.txt
